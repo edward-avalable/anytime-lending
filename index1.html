@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Services | Anytime Lending</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Video Background */
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Overlay Content */
+    .overlay {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.5); /* Optional: darkens content area */
+      padding-bottom: 5rem;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;    background: #fff;
+  color: #000;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: scale(1.12);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .rate {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .desc {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .apply-btn {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .apply-btn:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="127556784_main_xxl.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content Overlay -->
+  <div class="overlay">
+
+    <!-- Navbar -->
+    <nav>
+  <div style="display: flex; align-items: center;">
+    <img src="logo.jpg" alt="Anytime Lending Logo" style="height: 60px; width: 60px; border-radius: 50%; object-fit: cover; margin-right: 1rem;">
+    <h1>Anytime Lending</h1>
+  </div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Loans</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+    <!-- Loan Cards -->
+    <div class="grid">
+      <div class="card">
+        <h3>OFW / Overseas Loan</h3>
+        <div class="rate">4% / Month</div>
+        <div class="desc">Seaman, Overseas Filipino Workers</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>Small Purpose Loan</h3>
+        <div class="rate">3% / Month</div>
+        <div class="desc">Urban Poor / Livelihood</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>Business Loan</h3>
+        <div class="rate">3-5% / Month</div>
+        <div class="desc">Businessman, Corporate</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>Salary Loan</h3>
+        <div class="rate">3-4% / Month</div>
+        <div class="desc">Company Employee, Call Center Agents</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>Visa Assistance Loan</h3>
+        <div class="rate">3.8% EIR</div>
+        <div class="desc">Individuals Who Want to Migrate</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>Prenda OR/CR</h3>
+        <div class="rate">2.5% / Month</div>
+        <div class="desc">With Car or Motorcycle as Collateral</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>Real Estate Mortgage</h3>
+        <div class="rate">As Low As 1% / Month</div>
+        <div class="desc">Land or Building Title</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>SSS/GSIS/Pensioner Loan</h3>
+        <div class="rate">1.75% / Month</div>
+        <div class="desc">Pensioners, Government Employees</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="card">
+        <h3>Teacher’s Loan</h3>
+        <div class="rate">1.5% / Month</div>
+        <div class="desc">Licensed Public School Teachers</div>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
